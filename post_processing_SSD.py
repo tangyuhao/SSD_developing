@@ -88,9 +88,11 @@ def get_targets(clip_path):
 
     print(class_count)
     print("then filter static things")
+    filtered_classcount = class_count
     for cur_class in class_count:
         if cur_class in not_possible_classes:
-            class_count.pop(cur_class)
+            filtered_classcount.pop(cur_class)
+    class_count = filtered_classcount
 
 
     if (len(class_count) > 0):
