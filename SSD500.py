@@ -162,7 +162,8 @@ def get_clip_info(clip_path):
 
 if __name__ == "__main__":
     # Test on some demo image and visualize output.
-    path = '../BF_Segmentation/DAVIS/images/gold-fish'
+    path = '../BF_Segmentation/DAVIS/images/scooter-black'
+    path = 'testtttt'
     image_names = sorted([file for file in os.listdir(path) if file.endswith(".jpg")])
     max_len = len(image_names) + 1
     need_frames = 30

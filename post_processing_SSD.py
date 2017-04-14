@@ -59,16 +59,16 @@ class_dict = {
     3: "bird",
     14: "motorbike",
     4: "boat",
-    8: "sheep",
+    8: "cat",
     6: "bus",
-    1: "other",
+    1: "plane",
     5: "other",
-    9: "other",
     11: "other",
-    17: "other",
+    17: "sheep",
     18: "other",
     20: "other"
 }
+not_possible_classes = [16,9,5,11,18,20]
 def get_targets(clip_path):
     '''
     return find_target, max_class(int), class_count, clip_info
@@ -85,14 +85,21 @@ def get_targets(clip_path):
     # now get all clip_classes
     # count the time of appearance in whole clip for each class
     class_count = dict(Counter(clip_classes).items())
+
     print(class_count)
+    print("then filter static things")
+    for cur_class in class_count:
+        if cur_class in not_possible_classes:
+            class_count.pop(cur_class)
+
+
     if (len(class_count) > 0):
         
         #max_class = max(class_count, key=class_count.get)
         max_classes = OrderedDict(Counter(class_count).most_common(2))
         if (len(max_classes) == 2):
             max_classes_list = list(max_classes.items())
-            if (max_classes_list[0][1] * 0.7 > max_classes_list[1][1]):
+            if (max_classes_list[0][1] * 0.7 > max_classes_list[1][1] or max_classes_list[1][0] not in special_classes):
                 # remove the second item
                 max_classes.pop(max_classes_list[1][0])
         for max_class in max_classes:
