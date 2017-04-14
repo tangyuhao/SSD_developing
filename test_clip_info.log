@@ -1,0 +1,90 @@
+{15: 59, 2: 46, 9: 30, 20: 1, 14: 6}
+most frequent class: person
+../BF_Segmentation/DAVIS/images/bike-packing: person
+{3: 50}
+most frequent class: bird
+../BF_Segmentation/DAVIS/images/blackswan: bird
+{2: 56, 15: 50}
+most frequent class: bicycle
+../BF_Segmentation/DAVIS/images/bmx-trees: bicycle
+{15: 84}
+most frequent class: person
+../BF_Segmentation/DAVIS/images/breakdance: person
+{13: 90, 10: 4}
+most frequent class: horse
+../BF_Segmentation/DAVIS/images/camel: horse
+{7: 75}
+most frequent class: car
+../BF_Segmentation/DAVIS/images/car-roundabout: car
+{7: 40, 15: 11}
+most frequent class: car
+../BF_Segmentation/DAVIS/images/car-shadow: car
+{10: 104}
+most frequent class: cow
+../BF_Segmentation/DAVIS/images/cows: cow
+{15: 90, 13: 1, 12: 1}
+most frequent class: person
+../BF_Segmentation/DAVIS/images/dance-twirl: person
+{12: 60}
+most frequent class: dog
+../BF_Segmentation/DAVIS/images/dog: dog
+{15: 57, 12: 63, 3: 2, 10: 2}
+most frequent class: dog
+../BF_Segmentation/DAVIS/images/dogs-jump: dog
+{7: 52}
+most frequent class: car
+../BF_Segmentation/DAVIS/images/drift-chicane: car
+{7: 50, 6: 2}
+most frequent class: car
+../BF_Segmentation/DAVIS/images/drift-straight: car
+{12: 82, 10: 9, 17: 1}
+most frequent class: dog
+../BF_Segmentation/DAVIS/images/goat: dog
+{3: 16}
+most frequent class: bird
+../BF_Segmentation/DAVIS/images/gold-fish: bird
+{13: 50, 16: 43, 15: 27}
+most frequent class: horse
+../BF_Segmentation/DAVIS/images/horsejump-high: horse
+{15: 81, 7: 2, 14: 13}
+most frequent class: person
+../BF_Segmentation/DAVIS/images/india: person
+{15: 34, 2: 10, 12: 1}
+most frequent class: person
+../BF_Segmentation/DAVIS/images/judo: person
+{15: 49, 2: 2}
+most frequent class: person
+../BF_Segmentation/DAVIS/images/kite-surf: person
+{15: 47, 7: 6}
+most frequent class: person
+../BF_Segmentation/DAVIS/images/lab-coat: person
+{12: 34, 3: 4}
+most frequent class: dog
+../BF_Segmentation/DAVIS/images/libby: dog
+{15: 50, 20: 12, 7: 5}
+most frequent class: person
+../BF_Segmentation/DAVIS/images/loading: person
+{15: 59, 14: 49}
+most frequent class: person
+../BF_Segmentation/DAVIS/images/mbike-trick: person
+{15: 28, 14: 36, 2: 3}
+most frequent class: motorbike
+../BF_Segmentation/DAVIS/images/motocross-jump: motorbike
+{15: 69}
+most frequent class: person
+../BF_Segmentation/DAVIS/images/paragliding-launch: person
+{15: 100, 19: 10}
+most frequent class: person
+../BF_Segmentation/DAVIS/images/parkour: person
+{10: 79, 13: 4, 12: 7}
+most frequent class: cow
+../BF_Segmentation/DAVIS/images/pigs: cow
+{7: 41, 14: 43, 15: 33}
+most frequent class: motorbike
+../BF_Segmentation/DAVIS/images/scooter-black: motorbike
+{15: 23, 2: 1, 9: 1}
+most frequent class: person
+../BF_Segmentation/DAVIS/images/shooting: person
+{15: 99, 2: 18, 14: 2, 11: 1, 7: 25}
+most frequent class: person
+../BF_Segmentation/DAVIS/images/soapbox: person

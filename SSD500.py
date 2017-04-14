@@ -68,6 +68,8 @@ def get_clip_info(clip_path):
     clip_info = []
     for i in range(0,len(image_names)):
         img = mpimg.imread(os.path.join(clip_path, image_names[i]))
+        frame_name = os.path.join(os.path.basename(clip_path),image_names[i])
+        [height, width] = img.shape[:2]
         rclasses, rscores, rbboxes =  process_image(img)
         frame_info = []
         for k in range(len(rclasses)):
@@ -77,50 +79,80 @@ def get_clip_info(clip_path):
                 "box": rbboxes[k]
             }
             frame_info.append(box_info)
-        clip_info.append(frame_info)
-    return clip_info
+        clip_info.append({"frame_name":frame_name,"frame_info":frame_info})
+    return clip_info, [height, width]
 # output clip_info structure:
 # [   
-#     [
-#         {
-#             "class": int,
-#             "score": value from 0 to 1,
-#             "box": [ymin, xmin, ymax, xmax]
-#         },
+#     {
+#         "frame_name":<foldername>/<filename>.jpg,
+#         "frame_info": [
+#                 {
+#                     "class": int,
+#                     "score": value from 0 to 1,
+#                     "box": [ymin, xmin, ymax, xmax]
+#                 },
 
-#         {
-#             "class": int,
-#             "score": value from 0 to 1,
-#             "box": [ymin, xmin, ymax, xmax]
-#         },
+#                 {
+#                     "class": int,
+#                     "score": value from 0 to 1,
+#                     "box": [ymin, xmin, ymax, xmax]
+#                 },
 
-#         {
-#             "class": int,
-#             "score": value from 0 to 1,
-#             "box": [ymin, xmin, ymax, xmax]
-#         },
-#         ...
-#     ],
-#     [
-#         {
-#             "class": int,
-#             "score": value from 0 to 1,
-#             "box": [ymin, xmin, ymax, xmax]
-#         },
+#                 {
+#                     "class": int,
+#                     "score": value from 0 to 1,
+#                     "box": [ymin, xmin, ymax, xmax]
+#                 },
+#                 ...
+#             ]
+#     }
+#     {
+#         "frame_name":<foldername>/<filename>.jpg,
+#         "frame_info": [
+#                 {
+#                     "class": int,
+#                     "score": value from 0 to 1,
+#                     "box": [ymin, xmin, ymax, xmax]
+#                 },
 
-#         {
-#             "class": int,
-#             "score": value from 0 to 1,
-#             "box": [ymin, xmin, ymax, xmax]
-#         },
+#                 {
+#                     "class": int,
+#                     "score": value from 0 to 1,
+#                     "box": [ymin, xmin, ymax, xmax]
+#                 },
 
-#         {
-#             "class": int,
-#             "score": value from 0 to 1,
-#             "box": [ymin, xmin, ymax, xmax]
-#         },
-#         ...
-#     ]
+#                 {
+#                     "class": int,
+#                     "score": value from 0 to 1,
+#                     "box": [ymin, xmin, ymax, xmax]
+#                 },
+#                 ...
+#             ]
+#     }
+#     {
+#         "frame_name":<foldername>/<filename>.jpg,
+#         "frame_info": [
+#                 {
+#                     "class": int,
+#                     "score": value from 0 to 1,
+#                     "box": [ymin, xmin, ymax, xmax]
+#                 },
+
+#                 {
+#                     "class": int,
+#                     "score": value from 0 to 1,
+#                     "box": [ymin, xmin, ymax, xmax]
+#                 },
+
+#                 {
+#                     "class": int,
+#                     "score": value from 0 to 1,
+#                     "box": [ymin, xmin, ymax, xmax]
+#                 },
+#                 ...
+#             ]
+#     }
+#     ...
 # ]
 #Person: person
 # Animal: bird, cat, cow, dog, horse, sheep
@@ -130,10 +162,10 @@ def get_clip_info(clip_path):
 
 if __name__ == "__main__":
     # Test on some demo image and visualize output.
-    path = './demo/one_clip'
+    path = '../BF_Segmentation/DAVIS/images/gold-fish'
     image_names = sorted([file for file in os.listdir(path) if file.endswith(".jpg")])
     max_len = len(image_names) + 1
-    need_frames = 5
+    need_frames = 30
     for i in range(0,min(need_frames-1,max_len-1)):
         img = mpimg.imread(os.path.join(path, image_names[i]))
         rclasses, rscores, rbboxes =  process_image(img)
