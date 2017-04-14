@@ -99,7 +99,7 @@ def get_targets(clip_path):
         max_classes = OrderedDict(Counter(class_count).most_common(2))
         if (len(max_classes) == 2):
             max_classes_list = list(max_classes.items())
-            if (max_classes_list[0][1] * 0.7 > max_classes_list[1][1] or max_classes_list[1][0] not in special_classes):
+            if (max_classes_list[0][1] * 0.7 > max_classes_list[1][1]):
                 # remove the second item
                 max_classes.pop(max_classes_list[1][0])
         for max_class in max_classes:
